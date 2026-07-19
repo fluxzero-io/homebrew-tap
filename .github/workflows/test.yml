@@ -1,0 +1,44 @@
+name: Test formulae
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  fluxzero:
+    name: Fluxzero (${{ matrix.platform }})
+    runs-on: ${{ matrix.runner }}
+    timeout-minutes: 15
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - platform: macOS arm64
+            runner: macos-14
+          - platform: macOS x86_64
+            runner: macos-15-intel
+          - platform: Linux x86_64
+            runner: ubuntu-latest
+
+    steps:
+      - name: Check out tap
+        uses: actions/checkout@v6
+
+      - name: Set up Homebrew
+        uses: Homebrew/actions/setup-homebrew@master
+
+      - name: Audit formula
+        run: brew audit --strict Formula/fluxzero.rb
+
+      - name: Install formula
+        run: brew install --formula Formula/fluxzero.rb
+
+      - name: Verify commands
+        run: |
+          fz version
+          fluxzero version
+          brew test fluxzero
