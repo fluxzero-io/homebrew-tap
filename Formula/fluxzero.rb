@@ -1,18 +1,18 @@
 class Fluxzero < Formula
   desc "Develop, test, and manage Fluxzero applications"
   homepage "https://fluxzero.io"
-  version "1.8.1"
+  version "1.8.2"
   license "EUPL-1.2"
 
   on_macos do
     on_arm do
-      url "https://github.com/fluxzero-io/fluxzero-cli/releases/download/1.8.1/flux-macos-arm64"
-      sha256 "46c70530f815da842d431d294e92b53327312350d96bcf2f5091f2d929d79d5d"
+      url "https://github.com/fluxzero-io/fluxzero-cli/releases/download/1.8.2/flux-macos-arm64"
+      sha256 "523f8af886ca7b9632e3a09f30d72484d6bbcdca6cf1bfca5a4dc7d8b33d9132"
     end
 
     on_intel do
-      url "https://github.com/fluxzero-io/fluxzero-cli/releases/download/1.8.1/flux-macos-amd64"
-      sha256 "6d666dba4a41d9f3423c3291a135f05881704ae7bd362228b946192ecd7bd126"
+      url "https://github.com/fluxzero-io/fluxzero-cli/releases/download/1.8.2/flux-macos-amd64"
+      sha256 "a9befadb3e0726c1e7f4357a1a317394c735a8b98b10f028a7fc7733df41fdc6"
     end
   end
 
@@ -20,8 +20,8 @@ class Fluxzero < Formula
     depends_on arch: :x86_64
 
     on_intel do
-      url "https://github.com/fluxzero-io/fluxzero-cli/releases/download/1.8.1/flux-linux-amd64"
-      sha256 "49b730aa7547969424f8f86d9e537a121e89fa4a04ce9b3f85a538bc3f13c4d0"
+      url "https://github.com/fluxzero-io/fluxzero-cli/releases/download/1.8.2/flux-linux-amd64"
+      sha256 "a63a6cd5a590b90174c3e7efad57dda2de70af6e93591775267ad38f72375064"
     end
   end
 
