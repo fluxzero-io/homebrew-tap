@@ -2,7 +2,7 @@
 
 # Fluxzero Homebrew Tap
 
-Install the [Fluxzero CLI](https://github.com/fluxzero-io/fluxzero-cli) with Homebrew and start building on [Fluxzero](https://fluxzero.io), the European cloud for AI-built apps.
+Homebrew formula for the [Fluxzero CLI](https://github.com/fluxzero-io/fluxzero-cli).
 
 [Get started](https://fluxzero.io/get-started) · [How it works](https://fluxzero.io/how-it-works) · [Docs](https://fluxzero.io/docs)
 
