@@ -1,6 +1,10 @@
+<a href="https://fluxzero.io"><img src="https://raw.githubusercontent.com/fluxzero-io/.github/main/assets/brand/2026-09/repository-header.svg" alt="Fluxzero — The European cloud for AI-built apps" width="1280"></a>
+
 # Fluxzero Homebrew Tap
 
-Official Homebrew formulae for Fluxzero tools.
+Install the [Fluxzero CLI](https://github.com/fluxzero-io/fluxzero-cli) with Homebrew and start building on [Fluxzero](https://fluxzero.io), the European cloud for AI-built apps.
+
+[Get started](https://fluxzero.io/get-started) · [How it works](https://fluxzero.io/how-it-works) · [Docs](https://fluxzero.io/docs)
 
 ## Install
 
