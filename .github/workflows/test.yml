@@ -18,9 +18,9 @@ jobs:
       matrix:
         include:
           - platform: macOS arm64
-            runner: macos-14
+            runner: macos-latest
           - platform: macOS x86_64
-            runner: macos-15-intel
+            runner: macos-26-intel
           - platform: Linux x86_64
             runner: ubuntu-latest
 
