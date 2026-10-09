@@ -18,9 +18,9 @@ jobs:
       matrix:
         include:
           - platform: macOS arm64
-            runner: macos-14
+            runner: macos-latest
           - platform: macOS x86_64
-            runner: macos-15-intel
+            runner: macos-26-intel
           - platform: Linux x86_64
             runner: ubuntu-latest
 
@@ -29,6 +29,10 @@ jobs:
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
 
       - name: Set up Homebrew
+        # Refresh Brew/API metadata without migrating unrelated runner packages.
+        # Formula loading is enabled again for the audit/install/test steps below.
+        env:
+          HOMEBREW_DISABLE_LOAD_FORMULA: "1"
         uses: Homebrew/actions/setup-homebrew@e99025eb970cfa124b8284a35463d87426917478 # 2026.09.28.1
 
       - name: Audit formula
