@@ -33,6 +33,12 @@ brew uninstall fluxzero
 Formula updates are generated from immutable, tested artifacts published by the
 [Fluxzero CLI](https://github.com/fluxzero-io/fluxzero-cli) release pipeline.
 
+Dependabot checks GitHub Actions daily. Verified minor and patch updates use the
+Fluxzero Dependabot App to enable native auto-merge after all three platform
+audit, installation and command tests pass against the current `main`. Major
+updates require separate assessment. Formula releases continue to be generated
+by the CLI release pipeline and must pass the same platform checks.
+
 
 ---
 
