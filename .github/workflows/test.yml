@@ -33,7 +33,7 @@ jobs:
         # Formula loading is enabled again for the audit/install/test steps below.
         env:
           HOMEBREW_DISABLE_LOAD_FORMULA: "1"
-        uses: Homebrew/actions/setup-homebrew@c262868c096d909fc278daa87ed9772967331ea3 # 2026.11.02.1
+        uses: Homebrew/actions/setup-homebrew@63a2d4d8d4193eab3e62b1b782ff3ab8408f5b29 # 2026.11.09.1
 
       - name: Audit formula
         run: brew audit --strict --online fluxzero-io/tap/fluxzero
