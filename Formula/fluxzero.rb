@@ -5,13 +5,13 @@ class Fluxzero < Formula
 
   on_macos do
     on_arm do
-      url "https://github.com/fluxzero-io/fluxzero-cli/releases/download/1.21.26/flux-macos-arm64"
-      sha256 "6dda70d40b8cb1523ada7c71846efb9334d3874af0077d9d9954da3e7b103582"
+      url "https://github.com/fluxzero-io/fluxzero-cli/releases/download/1.21.27/flux-macos-arm64"
+      sha256 "99c24dd46e701c160e652353bd71f18463c754e8734fbfa82da109c393969ccb"
     end
 
     on_intel do
-      url "https://github.com/fluxzero-io/fluxzero-cli/releases/download/1.21.26/flux-macos-amd64"
-      sha256 "153c5bd33d08bd45eb9c68a63f24db68508b6a576482ee53c8f470781a4df1bc"
+      url "https://github.com/fluxzero-io/fluxzero-cli/releases/download/1.21.27/flux-macos-amd64"
+      sha256 "172bc644f1af69b2f5d9895cc7f1094028ed9957bafce7813d1bcfb6c8bfe9ff"
     end
   end
 
@@ -19,8 +19,8 @@ class Fluxzero < Formula
     depends_on arch: :x86_64
 
     on_intel do
-      url "https://github.com/fluxzero-io/fluxzero-cli/releases/download/1.21.26/flux-linux-amd64"
-      sha256 "41fab871cb982ff4456b91b9a426cfe8266d1ee506432e29dd67a27051c29dbc"
+      url "https://github.com/fluxzero-io/fluxzero-cli/releases/download/1.21.27/flux-linux-amd64"
+      sha256 "880cada29fabef628b480ccf799b2e22ade51be04c6ef44b20c3775b931ce1cf"
     end
   end
 
