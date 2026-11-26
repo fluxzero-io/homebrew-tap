@@ -5,13 +5,13 @@ class Fluxzero < Formula
 
   on_macos do
     on_arm do
-      url "https://github.com/fluxzero-io/fluxzero-cli/releases/download/1.21.35/flux-macos-arm64"
-      sha256 "a93069d8e6708610ea8e2d8a2b7a77452d0c471d8383c3f2511fdc29634ba8a8"
+      url "https://github.com/fluxzero-io/fluxzero-cli/releases/download/1.21.36/flux-macos-arm64"
+      sha256 "c389222bebd66982a9cdab758f0509a61b8ec0b7f54ef32e0f695458f33beb51"
     end
 
     on_intel do
-      url "https://github.com/fluxzero-io/fluxzero-cli/releases/download/1.21.35/flux-macos-amd64"
-      sha256 "c52121174f4aa4e84c334bbc842c10c77013d34db66c1cf4ff5c176601ba3647"
+      url "https://github.com/fluxzero-io/fluxzero-cli/releases/download/1.21.36/flux-macos-amd64"
+      sha256 "f2da7b3d583af8a04862895ffb1054809effd0cd3198460aa051ded069950173"
     end
   end
 
@@ -19,12 +19,20 @@ class Fluxzero < Formula
     depends_on arch: :x86_64
 
     on_intel do
-      url "https://github.com/fluxzero-io/fluxzero-cli/releases/download/1.21.35/flux-linux-amd64"
-      sha256 "538b578c61b1cb39ca75546f7f066f3f5f43be65aba868ff3eea651b39957a8a"
+      url "https://github.com/fluxzero-io/fluxzero-cli/releases/download/1.21.36/flux-linux-amd64"
+      sha256 "837794d773ea7b0c8cf0195cb1e7cf733327219f095bb2cd38360272d2059717"
     end
   end
 
+  option "with-cli-update-guard", "Check the version selected by the automatic CLI updater"
+
   def install
+    # Explicit brew upgrades do not set this variable, even if the option is retained in the receipt.
+    expected = ENV["HOMEBREW_FLUXZERO_CLI_UPDATE_VERSION"]
+    if expected && version.to_s != expected
+      raise "CLI update deferred: requested #{expected}, but Homebrew now offers #{version}"
+    end
+
     binary = if OS.mac?
       Hardware::CPU.arm? ? "flux-macos-arm64" : "flux-macos-amd64"
     else
